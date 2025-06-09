@@ -2,9 +2,13 @@ import {defineConfig} from 'vite';
 import path from 'path';
 
 export default defineConfig({
-  base: '/site_aui/', // <-- добавь эту строку
+  base: '/site_aui/',
   root: 'src',
   publicDir: 'public',
+  build: {
+    outDir: '../dist',
+    emptyOutDir: true
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
@@ -16,9 +20,5 @@ export default defineConfig({
         additionalData: `@use "@/styles/index.scss" as *;`
       }
     }
-  },
-  build: {
-    outDir: '../dist',
-    emptyOutDir: true
   }
 });
