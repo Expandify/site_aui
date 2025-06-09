@@ -1,0 +1,10 @@
+// === Base Styles ===
+@use 'base/globals' as *;
+@use 'base/utils' as *;
+
+// === Fonts & Variables ===
+@use 'fonts' as *;
+@use 'variables' as *;
+
+// === Pages ===
+@use 'pages/home' as *;
